@@ -6,13 +6,14 @@ const page = () => {
       </h1>
       <div className="flex flex-col gap-5 w-[95%] mx-auto py-5 *:flex *:flex-col *:gap-2">
         <div>
-          <p className="font-bold lg:text-2xl">
+          <h2 className="font-bold lg:text-2xl mb-2">
             DATA PROTECTION NOTICE FOR CUSTOMERS
-          </p>
+          </h2>
           <p>
             This Data Protection Notice <strong>(“Notice”)</strong> sets out the
-            basis which <i>MEOWAESTHETICSPRIVATE LIMITED (UEN:202434776ZH)</i>
-            (“we”, “us”, or “our”) may collect, use, discloseor otherwise
+            basis which <i>MEOWAESTHETICSPRIVATE LIMITED (UEN:202434776ZH)</i> (
+            <strong>“we”</strong>, <strong>“us”</strong>, or{" "}
+            <strong>“our”</strong>) may collect, use, discloseor otherwise
             process personal data of our customers in accordance with the
             Personal DataProtection Act <strong>(“PDPA”)</strong>. This Notice
             applies to personal data in our possession or under our control,
@@ -23,11 +24,13 @@ const page = () => {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold underline underline-offset-4">
+          <h2 className="text-lg font-bold underline underline-offset-4 mb-2">
             PERSONAL DATA
           </h2>
-          <h2 className="text-lg font-semibold">1. As used in this Notice:</h2>
-          <ul className="list-disc list-inside">
+          <h2 className="lg:text-lg font-semibold">
+            1. As used in this Notice:
+          </h2>
+          <ul className="list-disc list-inside flex flex-col gap-4">
             <li>
               <strong>customer</strong> means an individual who (a) has
               contacted us through any meanstofindout more about any goods or
@@ -44,7 +47,7 @@ const page = () => {
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold">
             2. Depending on the nature of your interaction with us, some
             examples of personal datawhich we may collect from you include name,
             residential address, email address, telephone number, nationality,
@@ -54,22 +57,22 @@ const page = () => {
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold">
             3. Other terms used in this Notice shall have the meanings given to
             themin thePDPA(where the context so permits)
           </h2>
         </div>
-        <h2 className="text-lg font-bold underline underline-offset-4">
+        <h2 className="text-lg font-bold underline underline-offset-4 mb-2">
           COLLECTION, USE AND DISCLOSURE OF PERSONAL DATA
         </h2>
 
         <div>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold">
             4. We generally do not collect your personal data unless (a) it is
             providedtousvoluntarily by you directly or via a third party who has
             been duly authorised by youtodisclose your personal data to us (your
-            “authorised representative”) after (i) you(or your authorised
-            representative) have been notified of the purposes for
+            <strong>“authorised representative”</strong> ) after (i) you(or your
+            authorised representative) have been notified of the purposes for
             whichthedatais collected, and (ii) you (or your authorised
             representative) have providedwrittenconsent to the collection and
             usage of your personal data for those purposes, or (b) collection
@@ -82,11 +85,11 @@ const page = () => {
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold">
             5. We may collect and use your personal data for any or all of the
             following purposes:
           </h2>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-inside flex flex-col gap-4">
             <li>
               performing obligations in the course of or in connection with our
               provisionof the goods and/or services requested by you;
@@ -119,23 +122,25 @@ const page = () => {
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold">
             6. We may disclose your personal data:
           </h2>
-          <li>
-            where such disclosure is required for performing obligations in the
-            courseof or in connection with our provision of the goods and
-            services requestedbyyou; or
-          </li>
-          <li>
-            to third party service providers, agents and other organisations
-            wehaveengaged to perform any of the functions with reference to
-            theabovementioned purposes.
-          </li>
+          <ul className="list-disc list-inside flex flex-col gap-4">
+            <li>
+              where such disclosure is required for performing obligations in
+              the courseof or in connection with our provision of the goods and
+              services requestedbyyou; or
+            </li>
+            <li>
+              to third party service providers, agents and other organisations
+              wehaveengaged to perform any of the functions with reference to
+              theabovementioned purposes.
+            </li>
+          </ul>
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold">
             7. The purposes listed in the above clauses may continue to apply
             even in situationswhere your relationship with us (for example,
             pursuant to a contract) hasbeenterminated or altered in any way, for
@@ -145,10 +150,10 @@ const page = () => {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold underline underline-offset-4">
+          <h2 className="text-lg font-bold underline underline-offset-4 mb-2">
             RELIANCE ON THE LEGITIMATE INTERESTS EXCEPTION
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold">
             8.In compliance with the PDPA, we may collect, use or disclose your
             personal datawithout your consent for the legitimate interests of
             MEOWCADEMYPRIVATELIMITED or another person. In relying on the
@@ -159,12 +164,12 @@ const page = () => {
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold">
             9. In line with the legitimate interests exception, we will collect,
             use or discloseyour personal data for the following purposes:
           </h2>
 
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-inside flex flex-col gap-4 mb-2">
             <li>Fraud detection and prevention;</li>
             <li>Detection and prevention of misuse of services;</li>
             <li>
@@ -184,10 +189,10 @@ const page = () => {
           </p>
         </div>
         <div>
-          <h2 className="text-lg font-bold underline underline-offset-4">
+          <h2 className="text-lg font-bold underline underline-offset-4 mb-2">
             WITHDRAWING YOUR CONSENT
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             10. The consent that you provide for the collection, use and
             disclosure of your personal data will remain valid until such time
             it is being withdrawn by you in writing. Youmaywithdraw consent and
@@ -196,7 +201,7 @@ const page = () => {
             request inwriting or via email to our Data Protection Officer at the
             contact details providedbelow.
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             11. Upon receipt of your written request to withdraw your consent,
             we may requirereasonable time (depending on the complexity of the
             request and its impact onour relationship with you) for your request
@@ -206,7 +211,7 @@ const page = () => {
             to processyour request within fourteen (14) business days of
             receiving it.
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             12. Whilst we respect your decision to withdraw your consent, please
             notethat depending on the nature and scope of your request, we may
             not be in a positiontocontinue providing our goods or services to
@@ -215,16 +220,16 @@ const page = () => {
             your withdrawal of consent, please inform us in writing in themanner
             described in clause 8 above.
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             13. Please note that withdrawing consent does not affect our right
             to continue tocollect, use and disclose personal data where such
             collection, use and disclosewithout consent is permitted or required
             under applicable laws.
           </h2>
-          <h2 className="text-lg font-bold underline underline-offset-4">
+          <h2 className="text-lg font-bold underline underline-offset-4 my-2">
             ACCESS TO AND CORRECTION OF PERSONAL DATA
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             14. If you wish to make (a) an access request for access to a copy
             of the personal datawhich we hold about you or information about the
             ways in which we use or discloseyour personal data, or (b) a
@@ -233,13 +238,13 @@ const page = () => {
             viaemail to our Data Protection Officer at the contact details
             provided below.
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             15. Please note that a reasonable fee may be charged for an access
             request. If so, wewill inform you of the fee before processing your
             request.
           </h2>
 
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             16. We will respond to your request as soon as reasonably possible.
             In general, our response will be within fourteen (14) business days.
             Should we not beabletorespond to your request within thirty (30)
@@ -250,10 +255,10 @@ const page = () => {
             informyou of thereasonswhy we are unable to do so (except where we
             are not required to do so under thePDPA).
           </h2>
-          <h2 className="text-lg font-bold underline underline-offset-4">
+          <h2 className="text-lg font-bold underline underline-offset-4 mb-2">
             PROTECTION OF PERSONAL DATA
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             17. To safeguard your personal data from unauthorised access,
             collection, use, disclosure, copying, modification, disposal or
             similar risks, we have introducedappropriate administrative,
@@ -268,17 +273,17 @@ const page = () => {
             access, andsecurityreview and testing performed regularly.
           </h2>
 
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             18. You should be aware, however, that no method of transmission
             over the Internet or method of electronic storage is completely
             secure. While security cannot beguaranteed, we strive to protect the
             security of your information and are constantlyreviewing and
             enhancing our information security measures.
           </h2>
-          <h2 className="text-lg font-bold underline underline-offset-4">
+          <h2 className="text-lg font-bold underline underline-offset-4 mb-2">
             ACCURACY OF PERSONAL DATA
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             19. We generally rely on personal data provided by you (or your
             authorisedrepresentative). In order to ensure that your personal
             data is current, completeandaccurate, please update us if there are
@@ -286,58 +291,64 @@ const page = () => {
             Officer in writing or via email at the contact details
             providedbelow.{" "}
           </h2>
-          <h2 className="text-lg font-bold underline underline-offset-4">
+          <h2 className="text-lg font-bold underline underline-offset-4 mb-2">
             RETENTION OF PERSONAL DATA
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             20. We may retain your personal data for as long as it is necessary
             to fulfil thepurposefor which it was collected, or as required or
             permitted by applicable laws.
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             21. We will cease to retain your personal data, or remove the means
             by whichthedatacan be associated with you, as soon as it is
             reasonable to assume that suchretention no longer serves the purpose
             for which the personal data was collected, and is no longer
             necessary for legal or business purposes.
           </h2>
-          <h2 className="text-lg font-bold underline underline-offset-4">
+          <h2 className="text-lg font-bold underline underline-offset-4 mb-2">
             TRANSFERS OF PERSONAL DATA OUTSIDE OF SINGAPORE
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             22. We generally do not transfer your personal data to countries
             outside of Singapore. However, if we do so, we will obtain your
             consent for the transfer to be madeandwewill take steps to ensure
             that your personal data continues to receive a standardof protection
             that is at least comparable to that provided under the PDPA.
           </h2>
-          <h2 className="text-lg font-bold underline underline-offset-4">
+          <h2 className="text-lg font-bold underline underline-offset-4 mb-2">
             DATA PROTECTION OFFICER{" "}
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-4">
             23. You may contact our Data Protection Officer if you have any
             enquiries or feedbackon our personal data protection policies and
             procedures, or if you wish to makeanyrequest, in the following
             manner:{" "}
           </h2>
-          <h2 className="text-lg font-bold underline underline-offset-4">
+          <div className="mb-4">
+            <p>Name of DPO : Dan Liew Sun Woo</p>
+            <p>Contact No. : 88088703</p>
+            <p>Email Address : cscat@meowcademy.com</p>
+          </div>
+          <h2 className="text-lg font-bold underline underline-offset-4 mb-2">
             EFFECT OF NOTICE AND CHANGES TO NOTICE
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-2">
             24. This Notice applies in conjunction with any other notices,
             contractual clausesandconsent clauses that apply in relation to the
             collection, use and disclosureof your personal data by us.
           </h2>
-          <h2 className="text-lg font-semibold">
+          <h2 className="lg:text-lg font-semibold mb-4">
             25. We may revise this Notice from time to time without any prior
             notice. Youmaydetermine if any such revision has taken place by
             referring to the date on whichthisNotice was last updated. Your
             continued use of our services constitutesyour acknowledgement and
             acceptance of such changes.
           </h2>
-
-          <p>Effective date : 27/05/2025</p>
-          <p>Last updated : 27/05/2025</p>
+          <div>
+            <p>Effective date : 27/05/2025</p>
+            <p>Last updated : 27/05/2025</p>
+          </div>
         </div>
       </div>
     </div>
