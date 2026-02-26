@@ -21,7 +21,7 @@ const AboutSection = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (sectionRef.current) {
@@ -53,7 +53,7 @@ const AboutSection = ({
         </Link>
       </div>
       <Image
-        quality={100}
+        quality={60}
         src={data?.small_image_url || "/assets/keyprocedures.webp"}
         alt="meow-hero-section-img"
         width={700}
@@ -63,7 +63,7 @@ const AboutSection = ({
       {/* <div className="hidden lg:block relative size-full h-[70vh]">
         <div className="absolute right-0 bottom-0 w-full h-full 2xl:w-4xl 2xl:max-w-2xl">
           <Image
-            quality={100}
+            quality={60}
             src={data?.small_image_url || "/assets/keyprocedures.webp"}
             alt="meow-hero-section-img"
             width={500}

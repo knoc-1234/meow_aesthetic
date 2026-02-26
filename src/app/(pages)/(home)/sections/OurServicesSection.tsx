@@ -42,7 +42,7 @@ const OurServicesSection = async () => {
     <section className="w-full relative pt-14 pb-1">
       <div className="absolute top-0 left-0 w-full h-full">
         <Image
-          quality={100}
+          quality={40}
           src={reviewbg}
           alt="review-bg"
           width={500}
@@ -75,7 +75,7 @@ const OurServicesSection = async () => {
               >
                 <div className="absolute top-0 left-0 w-full h-full rounded-4xl transition-all duration-300 group-hover:z-50 group-hover:scale-105">
                   <Image
-                    quality={100}
+                    quality={60}
                     src={e?.banner_image_url}
                     alt={e?.title}
                     width={1000}

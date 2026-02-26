@@ -63,7 +63,7 @@ const ProductQuickViewPopup = ({
         <div className="grid lg:grid-cols-2 gap-8 w-full">
           <div className="relative size-full max-w-sm max-h-96">
             <Image
-              quality={100}
+              quality={70}
               src={imageUrl || "/assets/keyprocedures.webp"}
               alt="meow-hero-section-img"
               width={500}

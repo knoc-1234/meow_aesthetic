@@ -15,7 +15,7 @@ const LocationCard = ({
     <div className="flex flex-col gap-5 max-w-sm">
       <div className="relative aspect-square size-full">
         <Image
-          quality={100}
+          quality={60}
           src={imageUrl || "/assets/keyprocedures.webp"}
           alt="meow-hero-section-img"
           width={500}

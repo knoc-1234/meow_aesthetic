@@ -42,7 +42,7 @@ const ShopProductCard = ({
           onClick={() => setShowPopup(!showPopup)}
         >
           <Image
-            quality={100}
+            quality={60}
             src={imageUrl || "/assets/keyprocedures.webp"}
             alt="meow-hero-section-img"
             width={500}

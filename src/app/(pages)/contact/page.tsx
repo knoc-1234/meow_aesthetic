@@ -21,7 +21,7 @@ const page = () => {
         <div className="hidden lg:block w-full">
           <div className="rounded-t-full size-full relative overflow-hidden">
             <Image
-              quality={100}
+              quality={60}
               src={"/assets/contact.jpg"}
               alt="Contact-Meow"
               width={800}

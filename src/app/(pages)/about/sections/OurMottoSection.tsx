@@ -27,7 +27,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
               </div>
               {e?.id === 3 && (
                 <Image
-                  quality={100}
+                  quality={60}
                   src={e?.small_image_url}
                   alt={e?.title}
                   width={500}
@@ -37,7 +37,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
               )}
               {e?.id === 4 && (
                 <Image
-                  quality={100}
+                  quality={60}
                   src={e?.small_image_url}
                   alt={e?.title}
                   width={500}
@@ -48,7 +48,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
 
               {e?.id === 5 && (
                 <Image
-                  quality={100}
+                  quality={60}
                   src={e?.small_image_url}
                   alt={e?.title}
                   width={500}
@@ -58,7 +58,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
               )}
               {e?.id === 6 && (
                 <Image
-                  quality={100}
+                  quality={60}
                   src={e?.small_image_url}
                   alt={e?.title}
                   width={500}
@@ -68,7 +68,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
               )}
               {e?.id === 7 && (
                 <Image
-                  quality={100}
+                  quality={60}
                   src={e?.small_image_url}
                   alt={e?.title}
                   width={500}

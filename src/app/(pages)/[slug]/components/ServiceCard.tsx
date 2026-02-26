@@ -16,7 +16,7 @@ const ServiceCard = ({
   return (
     <div className="flex flex-col gap-5 w-full min-h-full max-w-[250px]">
       <Image
-        quality={100}
+        quality={60}
         src={imgUrl || "/assets/keyprocedures.webp"}
         alt="service"
         width={500}

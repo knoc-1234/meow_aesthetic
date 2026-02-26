@@ -6,7 +6,7 @@ const AboutSection = ({ data }: { data: AboutUsData }) => {
     <section className="grid lg:grid-cols-2 grid-rows-[100svh] relative">
       <div className="h-full bg-black relative">
         <Image
-          quality={100}
+          quality={60}
           src={data?.big_image_url || "/assets/keyprocedures.webp"}
           alt="about meow"
           width={1000}
@@ -14,7 +14,7 @@ const AboutSection = ({ data }: { data: AboutUsData }) => {
           className="absolute top-0 left-0 w-full h-full object-cover opacity-40"
         />
         <Image
-          quality={100}
+          quality={60}
           src={data?.big_image_url || "/assets/keyprocedures.webp"}
           alt="about meow"
           width={1000}
@@ -33,7 +33,7 @@ const AboutSection = ({ data }: { data: AboutUsData }) => {
         </div>
         <div className="relative bg-white p-10">
           <Image
-            quality={100}
+            quality={60}
             src={data?.small_image_url || "/assets/keyprocedures.webp"}
             alt="about meow"
             width={1000}
