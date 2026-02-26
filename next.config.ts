@@ -3,7 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["admin-panel.meowaesthetics.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "admin-panel.meowaesthetics.com",
+      },
+    ],
   },
   typescript: {
     ignoreBuildErrors: true,

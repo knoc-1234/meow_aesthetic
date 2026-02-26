@@ -53,7 +53,7 @@ const AboutSection = ({
         </Link>
       </div>
       <Image
-        quality={60}
+        quality={75}
         src={data?.small_image_url || "/assets/keyprocedures.webp"}
         alt="meow-hero-section-img"
         width={700}
@@ -63,7 +63,7 @@ const AboutSection = ({
       {/* <div className="hidden lg:block relative size-full h-[70vh]">
         <div className="absolute right-0 bottom-0 w-full h-full 2xl:w-4xl 2xl:max-w-2xl">
           <Image
-            quality={60}
+            quality={75}
             src={data?.small_image_url || "/assets/keyprocedures.webp"}
             alt="meow-hero-section-img"
             width={500}

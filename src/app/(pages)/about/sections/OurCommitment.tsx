@@ -13,7 +13,7 @@ const OurCommitment = ({ data }: { data: OurCommitmentData }) => {
         </div>
         <div className="relative w-full min-h-full ">
           <Image
-            quality={60}
+            quality={75}
             src={data?.big_image_url || "/assets/keyprocedures.webp"}
             alt="about meow"
             width={1000}

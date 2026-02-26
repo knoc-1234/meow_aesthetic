@@ -29,7 +29,7 @@ const ReviewCard = ({ imageUrl }: { imageUrl: string }) => {
         className="relative aspect-square h-96 w-full rounded-2xl group overflow-hidden cursor-pointer"
       >
         <Image
-          quality={60}
+          quality={75}
           src={imageUrl || "/assets/keyprocedures.webp"}
           alt="meow-hero-section-img"
           width={500}
@@ -43,7 +43,7 @@ const ReviewCard = ({ imageUrl }: { imageUrl: string }) => {
         <Popup isOpen={showPopup} onClose={() => setShowPopup(false)}>
           <div className="">
             <Image
-              quality={60}
+              quality={75}
               src={imageUrl || "/assets/keyprocedures.webp"}
               alt="meow-hero-section-img"
               width={500}

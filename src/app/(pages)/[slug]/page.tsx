@@ -6,7 +6,7 @@ import ApiError from "@/components/error/ApiError";
 export const dynamic = "force-dynamic";
 
 type Props = {
-  searchParams: { id?: string };
+  searchParams: Promise<{ id?: string }>;
 };
 
 export type ServiceData = {
@@ -38,7 +38,8 @@ const getServiceDetailsData = async (id: string) => {
 
 const page = async ({ searchParams }: Props) => {
   //
-  const id = (await searchParams?.id) || "";
+  const params = await searchParams;
+  const id = params?.id || "";
 
   //
   const serviceDetailsData = await getServiceDetailsData(id);
@@ -48,7 +49,7 @@ const page = async ({ searchParams }: Props) => {
   }
 
   const service = serviceDetailsData?.data?.find(
-    (item: ServiceData) => String(item?.id) === id
+    (item: ServiceData) => String(item?.id) === id,
   );
 
   return (

@@ -43,7 +43,7 @@ const page = async () => {
           {pricelistData?.data?.map((e, index) => (
             <Image
               key={index + "pricelist"}
-              quality={60}
+              quality={75}
               src={e?.image_url || "/assets/MeowAstetic(2).jpeg"}
               alt="pricelist - meow aesthetic"
               width={500}

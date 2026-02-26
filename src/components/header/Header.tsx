@@ -40,7 +40,7 @@ const Header = () => {
             {/* Left section - Logo */}
             <Link href="/" className="min-w-20 aspect-square relative block">
               <Image
-                quality={100}
+                quality={75}
                 src="/assets/bluelogo.webp"
                 alt="meow aesthetics"
                 sizes="80px"
