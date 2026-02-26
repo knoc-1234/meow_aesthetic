@@ -77,7 +77,7 @@ const OurServicesSection = async () => {
                   <Image
                     quality={75}
                     src={e?.banner_image_url}
-                    alt={e?.title}
+                    alt={e?.title || "service banner"}
                     width={1000}
                     height={500}
                     className="w-full h-full rounded-4xl object-cover border-7 border-white"

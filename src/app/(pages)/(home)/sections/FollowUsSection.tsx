@@ -72,7 +72,7 @@ const FollowUsSection = async () => {
                 >
                   <Image
                     src={e?.image_url || "/assets/keyprocedures.webp"}
-                    alt={e?.type}
+                    alt={e?.type || "social media"}
                     width={500}
                     height={500}
                     className="size-full max-w-[250px] aspect-square rounded-xl object-cover"

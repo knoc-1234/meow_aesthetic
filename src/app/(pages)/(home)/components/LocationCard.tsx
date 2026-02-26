@@ -23,8 +23,9 @@ const LocationCard = ({
           className="w-full h-full object-cover"
         />
       </div>
+
+      <h3 className="text-2xl font-semibold">{addressTitle}</h3>
       <ul className="flex flex-col gap-3 list-disc list-inside text-2xl">
-        {addressTitle}
         <li>{address}</li>
         <li>Mon-Sun {mon_to_fri_time}</li>
       </ul>

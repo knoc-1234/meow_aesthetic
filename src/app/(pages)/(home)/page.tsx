@@ -31,7 +31,7 @@ const Home = async () => {
   const data = heroData?.data[0];
 
   return (
-    <>
+    <main>
       <HeroSection
         desktopUrl={data?.background_image_url}
         mobileUrl={data?.mobile_video_url}
@@ -42,7 +42,7 @@ const Home = async () => {
       <LocationSection />
       <ReviewSection />
       <FollowUsSection />
-    </>
+    </main>
   );
 };
 

@@ -29,7 +29,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
                 <Image
                   quality={75}
                   src={e?.small_image_url}
-                  alt={e?.title}
+                  alt={e?.title || "motto image"}
                   width={500}
                   height={500}
                   className="absolute left-0 lg:left-40 top-0 size-20 sm:size-40 xl:size-50 2xl:h-64 2xl:w-[450px] object-cover"
@@ -39,7 +39,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
                 <Image
                   quality={75}
                   src={e?.small_image_url}
-                  alt={e?.title}
+                  alt={e?.title || "motto image"}
                   width={500}
                   height={500}
                   className="absolute right-0 lg:right-40 top-0 size-20 sm:size-40 xl:size-50 2xl:size-72 object-cover"
@@ -50,7 +50,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
                 <Image
                   quality={75}
                   src={e?.small_image_url}
-                  alt={e?.title}
+                  alt={e?.title || "motto image"}
                   width={500}
                   height={500}
                   className="absolute right-0 -translate-y-1/2 top-1/2 size-12 sm:size-32 lg:size-40 object-cover"
@@ -60,7 +60,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
                 <Image
                   quality={75}
                   src={e?.small_image_url}
-                  alt={e?.title}
+                  alt={e?.title || "motto image"}
                   width={500}
                   height={500}
                   className="absolute right-0 2xl:right-28 bottom-0 size-20 sm:size-40 xl:size-50 2xl:size-72 object-cover"
@@ -70,7 +70,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
                 <Image
                   quality={75}
                   src={e?.small_image_url}
-                  alt={e?.title}
+                  alt={e?.title || "motto image"}
                   width={500}
                   height={500}
                   className="absolute left-0 bottom-0 size-20 sm:size-40 xl:size-50 2xl:size-72 object-cover"
