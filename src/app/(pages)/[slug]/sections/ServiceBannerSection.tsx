@@ -27,7 +27,7 @@ const ServiceBannerSection = ({
             <Image
               quality={75}
               src={first_image_url || "/assets/keyprocedures.webp"}
-              alt=""
+              alt={title || "service banner"}
               width={500}
               height={500}
               className="absolute left-0 bottom-20 sm:bottom-10 w-40 sm:w-60 lg:w-70 h-50 lg:h-80 2xl:h-90 z-10 object-cover"
@@ -35,7 +35,7 @@ const ServiceBannerSection = ({
             <Image
               quality={75}
               src={center_image_url || "/assets/keyprocedures.webp"}
-              alt=""
+              alt={title || "service banner"}
               width={800}
               height={800}
               className="absolute left-1/2 -translate-x-1/2 bottom-0 aspect-video lg:max-w-sm w-fit lg:w-full h-36 lg:h-48 z-30 object-cover"
@@ -43,7 +43,7 @@ const ServiceBannerSection = ({
             <Image
               quality={75}
               src={third_image_url || "/assets/keyprocedures.webp"}
-              alt=""
+              alt={title || "service banner"}
               width={500}
               height={500}
               className="absolute right-0 bottom-10 sm:bottom-0 w-40 sm:w-52 lg:w-64 h-50 lg:h-80 2xl:h-90 z-10 object-cover"

@@ -82,9 +82,9 @@ const OurServicesSection = async () => {
                     height={500}
                     className="w-full h-full rounded-4xl object-cover border-7 border-white"
                   />
-                  <h4 className="transition-all absolute bottom-5 left-5 text-white font-semibold text-2xl">
+                  <h2 className="transition-all absolute bottom-5 left-5 text-white font-semibold text-2xl">
                     {e?.title}
-                  </h4>
+                  </h2>
                 </div>
               </Link>
             ))}

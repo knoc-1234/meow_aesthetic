@@ -73,7 +73,7 @@ const ProductQuickViewPopup = ({
           </div>
           <div className="flex flex-col gap-5 justify-between overflow-auto max-h-96">
             <div className="flex flex-col gap-2">
-              <h4>{title}</h4>
+              <h3>{title}</h3>
               <p>$ {price}</p>
               <p>{description}</p>
             </div>

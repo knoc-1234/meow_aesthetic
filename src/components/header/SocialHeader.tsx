@@ -21,7 +21,7 @@ const SocialHeader = () => {
     const fetchServices = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api_social_media_list`
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api_social_media_list`,
         );
         const data = await response.json();
         setSocialMedia(data?.data || []);
@@ -33,6 +33,19 @@ const SocialHeader = () => {
     fetchServices();
   }, []);
 
+  const getLabel = (type: string) => {
+    switch (type) {
+      case "instagram":
+        return "Visit our Instagram page";
+      case "tiktok":
+        return "Visit our TikTok page";
+      case "facebook":
+        return "Visit our Facebook page";
+      default:
+        return "Visit our social media page";
+    }
+  };
+
   return (
     <div className="flex items-center gap-3 justify-end w-[95%] mx-auto">
       {socialMedia.map((e, index) => (
@@ -41,7 +54,8 @@ const SocialHeader = () => {
           href={e?.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="size-6"
+          aria-label={getLabel(e?.type)}
+          className="size-6 focus:outline-none focus:rounded-full focus:ring-2 focus:ring-gray-400"
         >
           {e?.type === "instagram" && <InstaIcon />}
           {e?.type === "tiktok" && <TikTokIcon />}
