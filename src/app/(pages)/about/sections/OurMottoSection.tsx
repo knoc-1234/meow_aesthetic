@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MotoAndValuesData } from "../page";
+import React from "react";
 
 const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
   return (
@@ -15,11 +16,8 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
       <div className="w-full sm:w-[70%] mx-auto min-h-full flex flex-col gap-8 justify-center items-center text-center">
         {data &&
           data?.map((e, index) => (
-            <>
-              <div
-                key={index + "about"}
-                className="flex flex-col gap-5 relative z-50"
-              >
+            <React.Fragment key={index}>
+              <div className="flex flex-col gap-5 relative z-50">
                 <h2 className="text-xl sm:text-2xl lg:text-5xl font-[--font-playfair] font-semibold">
                   {e?.title}
                 </h2>
@@ -76,7 +74,7 @@ const OurMottoSection = ({ data }: { data: MotoAndValuesData[] }) => {
                   className="absolute left-0 bottom-0 size-20 sm:size-40 xl:size-50 2xl:size-72 object-cover"
                 />
               )}
-            </>
+            </React.Fragment>
           ))}
       </div>
     </section>

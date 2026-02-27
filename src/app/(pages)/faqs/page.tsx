@@ -3,7 +3,7 @@ import FaqSection from "./sections/FaqSection";
 import ApiError from "@/components/error/ApiError";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 const getFaqData = async () => {
   try {

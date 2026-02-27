@@ -8,7 +8,7 @@ import AboutSection from "./sections/AboutSection";
 import axiosServer from "@/lib/axios";
 import ApiError from "@/components/error/ApiError";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 const getHeroData = async () => {
   try {

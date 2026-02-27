@@ -3,7 +3,7 @@ import ServiceBannerSection from "./sections/ServiceBannerSection";
 import ServiceCardsSection from "./sections/ServiceCardsSection";
 import ApiError from "@/components/error/ApiError";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 type Props = {
   searchParams: Promise<{ id?: string }>;

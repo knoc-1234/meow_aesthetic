@@ -2,7 +2,7 @@ import axiosServer from "@/lib/axios";
 import ShopProductCard from "../(home)/components/ShopProductCard";
 import ApiError from "@/components/error/ApiError";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 type Product = {
   id: number;
@@ -29,13 +29,16 @@ const getProductData = async (): Promise<ProductApiResponse | null> => {
 };
 
 const groupByType = (products: Product[]) => {
-  return products.reduce((acc, product) => {
-    if (!acc[product.type]) {
-      acc[product.type] = [];
-    }
-    acc[product.type].push(product);
-    return acc;
-  }, {} as Record<string, Product[]>);
+  return products.reduce(
+    (acc, product) => {
+      if (!acc[product.type]) {
+        acc[product.type] = [];
+      }
+      acc[product.type].push(product);
+      return acc;
+    },
+    {} as Record<string, Product[]>,
+  );
 };
 
 const Product = async () => {

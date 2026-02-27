@@ -3,7 +3,7 @@ import axiosServer from "@/lib/axios";
 import Image from "next/image";
 import DownloadButton from "./DownloadButton";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 type Pricelist = {
   id: number;

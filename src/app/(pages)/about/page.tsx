@@ -4,7 +4,7 @@ import OurMottoSection from "./sections/OurMottoSection";
 import axiosServer from "@/lib/axios";
 import ApiError from "@/components/error/ApiError";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export type AboutUsData = {
   id: number;
@@ -50,15 +50,15 @@ const About = async () => {
 
   // Filter based on type
   const aboutUs = aboutUsData?.data.find(
-    (item: AboutUsData) => item.type === "About Us"
+    (item: AboutUsData) => item.type === "About Us",
   );
 
   const motoAndValues = aboutUsData?.data.filter(
-    (item: MotoAndValuesData) => item.type === "Moto and Values"
+    (item: MotoAndValuesData) => item.type === "Moto and Values",
   );
 
   const ourCommitment = aboutUsData?.data.find(
-    (item: OurCommitmentData) => item.type === "Commitment"
+    (item: OurCommitmentData) => item.type === "Commitment",
   );
 
   return (
