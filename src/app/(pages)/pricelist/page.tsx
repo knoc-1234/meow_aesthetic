@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { createPageMetadata, createServiceSchema } from "@/lib/seo";
-import { getCoreServiceMenuGroups } from "@/lib/service-pricing";
+import { priceListSections } from "@/lib/price-list-data";
 import ApiError from "@/components/error/ApiError";
 import axiosServer from "@/lib/axios";
 import JsonLd from "@/components/seo/JsonLd";
@@ -39,27 +39,17 @@ const getPricelistData = async (): Promise<PricelistApiResponse | null> => {
 const page = async () => {
   //
   const pricelistData = await getPricelistData();
-  const coreServiceMenuGroups = await getCoreServiceMenuGroups();
 
   if (!pricelistData) {
     return <ApiError />;
   }
 
-  const sections = coreServiceMenuGroups.map((group) => ({
-    title: `${group.title} Price List`,
-    items: group.items.map((item) => ({
-      title: item.name,
-      price: item.price.replace("SGD ", ""),
-      duration: "",
-    })),
-  }));
-
   const priceSchema = createServiceSchema({
     name: "Meow Aesthetics Service Price List",
     description:
-      "Price list for Meow Aesthetics nail, facial and lash services in Singapore.",
+      "Price list for Meow Aesthetics nail, lash, facial, IPL and spa services in Singapore.",
     path: "/pricelist",
-    offers: sections.flatMap((section) =>
+    offers: priceListSections.flatMap((section) =>
       section.items.map((item) => ({
         name: item.title,
         price: item.price,
@@ -80,8 +70,9 @@ const page = async () => {
               Meow Aesthetics Price List 2026 - Singapore
             </h1>
             <p className="max-w-3xl mx-auto leading-8">
-              Review our latest prices for nail services, lash treatments, and
-              facial appointments in Singapore before booking your visit.
+              Review the full Meow Aesthetics price list in HTML text,
+              including nails, lashes, facials, IPL services, and spa add-ons
+              before booking your visit.
             </p>
             <div className="flex flex-wrap gap-3 items-center justify-center">
               <Link
@@ -106,7 +97,7 @@ const page = async () => {
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">
-            {sections.map((section) => (
+            {priceListSections.map((section) => (
               <section
                 key={section.title}
                 className="bg-white border border-neutral-200 rounded-3xl p-6 flex flex-col gap-4"
@@ -122,11 +113,6 @@ const page = async () => {
                     >
                       <div>
                         <p className="font-medium">{item.title}</p>
-                        {item.duration ? (
-                          <p className="text-sm text-neutral-500">
-                            {item.duration}
-                          </p>
-                        ) : null}
                       </div>
                       <span className="font-semibold">SGD {item.price}</span>
                     </li>
