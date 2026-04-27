@@ -1,28 +1,30 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import NextTopLoader from "nextjs-toploader";
-
-// "playfair display",serif
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
+import { businessName, siteUrl } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Meow Aesthetics & Luxury",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${businessName} | Nail Salon, Facial & Lash Treatment Singapore`,
+    template: `%s | ${businessName}`,
+  },
+  description:
+    "Meow Aesthetics offers gel nails, lash extensions, facials, and skin treatments in Singapore with service pages, location pages, and clear booking options.",
+  alternates: {
+    canonical: siteUrl,
+  },
+  openGraph: {
+    title: `${businessName} | Nail Salon, Facial & Lash Treatment Singapore`,
+    description:
+      "Book gel nails, facials, lash treatments, and beauty services with Meow Aesthetics in Singapore.",
+    url: siteUrl,
+    siteName: businessName,
+    locale: "en_SG",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -32,9 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${playfair.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         <NextTopLoader />
         <Header />
         {children}

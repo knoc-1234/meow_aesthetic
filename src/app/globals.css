@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+:root {
+  --font-geist-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-geist-mono: "Consolas", "Courier New", monospace;
+  --font-playfair: Georgia, "Times New Roman", serif;
+}
+
+body {
+  font-family: var(--font-geist-sans);
+}

@@ -31,7 +31,7 @@ const ReviewCard = ({ imageUrl }: { imageUrl: string }) => {
         <Image
           quality={75}
           src={imageUrl || "/assets/keyprocedures.webp"}
-          alt="meow-hero-section-img"
+          alt="Customer review image for Meow Aesthetics"
           width={500}
           height={500}
           className="w-full h-full object-cover rounded-2xl transition-all duration-500 transform group-hover:scale-110"
@@ -45,7 +45,7 @@ const ReviewCard = ({ imageUrl }: { imageUrl: string }) => {
             <Image
               quality={75}
               src={imageUrl || "/assets/keyprocedures.webp"}
-              alt="meow-hero-section-img"
+              alt="Customer review image for Meow Aesthetics"
               width={500}
               height={500}
               className="w-full h-full object-cover"

@@ -3,6 +3,7 @@ import reviewbg from "@/../public/assets/homeReviewBg.png";
 import Link from "next/link";
 import ApiError from "@/components/error/ApiError";
 import axiosServer from "@/lib/axios";
+import { resolveServicePath } from "@/lib/site-data";
 
 type Serivce = {
   id: number;
@@ -64,7 +65,7 @@ const OurServicesSection = async () => {
           >
             {services.map((e, index) => (
               <Link
-                href={`/${e?.slug}?id=${e?.id}`}
+                href={resolveServicePath({ id: e?.id, slug: e?.slug })}
                 key={index + "service"}
                 className={`relative h-[480px] rounded-4xl group transition-all duration-300 cursor-pointer ${
                   isFewServices ? "flex-1 min-w-0" : "w-64"

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { resolveServicePath } from "@/lib/site-data";
 
 type Service = {
   id: number;
@@ -79,7 +80,12 @@ const QuickLinksFooter = () => {
             <ul className="flex flex-col gap-2 px-3 lg:whitespace-nowrap text-base">
               {services?.map((service) => (
                 <li key={service.id}>
-                  <Link href={`/${service?.slug}?id=${service?.id}`}>
+                  <Link
+                    href={resolveServicePath({
+                      id: service?.id,
+                      slug: service?.slug,
+                    })}
+                  >
                     {service?.title}
                   </Link>
                 </li>
@@ -98,6 +104,9 @@ const QuickLinksFooter = () => {
         </li>
         <li>
           <Link href="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link href="/blog">Blog</Link>
         </li>
       </ul>
     </div>

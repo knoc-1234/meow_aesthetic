@@ -2,12 +2,14 @@ import Image from "next/image";
 
 const ServiceBannerSection = ({
   title,
+  subtitle,
   description,
   first_image_url,
   third_image_url,
   center_image_url,
 }: {
   title: string;
+  subtitle?: string;
   description: string;
   first_image_url: string;
   third_image_url: string;
@@ -20,6 +22,11 @@ const ServiceBannerSection = ({
           <h1 className="text-xl lg:text-4xl 2xl:text-7xl font-[--font-playfair]">
             {title}
           </h1>
+          {subtitle ? (
+            <h2 className="text-lg lg:text-2xl 2xl:text-4xl font-[--font-playfair]">
+              {subtitle}
+            </h2>
+          ) : null}
           <p className="lg:text-xl">{description}</p>
         </div>
         <div className="w-full h-full flex items-center justify-center">

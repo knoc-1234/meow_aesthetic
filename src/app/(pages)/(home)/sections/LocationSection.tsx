@@ -1,29 +1,7 @@
-import axiosServer from "@/lib/axios";
 import LocationCard from "../components/LocationCard";
 import LocationHeader from "../components/LocationHeader";
 import ApiError from "@/components/error/ApiError";
-
-interface LocationItem {
-  title: string;
-  address: string;
-  mon_to_fri_time: string;
-  image_url: string;
-}
-
-interface LocationApiResponse {
-  success: boolean;
-  data: LocationItem[];
-}
-
-const getLocationData = async (): Promise<LocationApiResponse | null> => {
-  try {
-    const res = await axiosServer.get("/api_location_list");
-    return res.data;
-  } catch (error) {
-    console.error("Failed to fetch location data:", error);
-    return null;
-  }
-};
+import { getLocationData } from "@/lib/locations";
 
 const LocationSection = async () => {
   //

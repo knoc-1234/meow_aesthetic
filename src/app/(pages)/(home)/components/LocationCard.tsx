@@ -17,7 +17,7 @@ const LocationCard = ({
         <Image
           quality={75}
           src={imageUrl || "/assets/keyprocedures.webp"}
-          alt="meow-hero-section-img"
+          alt={`${addressTitle} - Meow Aesthetics location`}
           width={500}
           height={500}
           className="w-full h-full object-cover"

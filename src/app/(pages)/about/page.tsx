@@ -3,8 +3,15 @@ import AboutSection from "./sections/AboutSection";
 import OurMottoSection from "./sections/OurMottoSection";
 import axiosServer from "@/lib/axios";
 import ApiError from "@/components/error/ApiError";
+import { createPageMetadata } from "@/lib/seo";
 
 export const revalidate = 60;
+export const metadata = createPageMetadata({
+  title: "About Meow Aesthetics | Beauty Clinic Singapore",
+  description:
+    "Meow Aesthetics is a Singapore beauty clinic offering nails, facials, lashes and skin treatments at Marine Parade and Woods Square. Beauty in every detail.",
+  path: "/about",
+});
 
 export type AboutUsData = {
   id: number;

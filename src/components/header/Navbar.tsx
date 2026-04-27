@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { resolveServicePath } from "@/lib/site-data";
 
 type Props = {
   onLinkClick?: () => void;
@@ -20,7 +21,7 @@ const Navbar = ({ onLinkClick }: Props) => {
     const fetchServices = async () => {
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api_service_list`
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api_service_list`,
         );
         const data = await res.json();
         setServices(data?.data || []);
@@ -49,7 +50,7 @@ const Navbar = ({ onLinkClick }: Props) => {
             {services?.map((service) => (
               <Link
                 key={service.id}
-                href={`/${service?.slug}?id=${service?.id}`}
+                href={resolveServicePath({ id: service?.id, slug: service?.slug })}
                 onClick={onLinkClick}
               >
                 {service?.title}
@@ -100,7 +101,10 @@ const Navbar = ({ onLinkClick }: Props) => {
               {services?.map((service) => (
                 <li key={service.id}>
                   <Link
-                    href={`/${service?.slug}?id=${service?.id}`}
+                    href={resolveServicePath({
+                      id: service?.id,
+                      slug: service?.slug,
+                    })}
                     onClick={onLinkClick}
                   >
                     {service?.title}
@@ -122,6 +126,9 @@ const Navbar = ({ onLinkClick }: Props) => {
       </Link>
       <Link href="/contact" onClick={onLinkClick}>
         Contact
+      </Link>
+      <Link href="/blog" onClick={onLinkClick}>
+        Blog
       </Link>
     </nav>
   );

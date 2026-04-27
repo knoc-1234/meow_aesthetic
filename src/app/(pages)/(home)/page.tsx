@@ -1,14 +1,22 @@
-import ShopWithUs from "./sections/ShopWithUs";
-import LocationSection from "./sections/LocationSection";
-import ReviewSection from "./sections/ReviewSection";
-import FollowUsSection from "./sections/FollowUsSection";
-import OurServicesSection from "./sections/OurServicesSection";
-import HeroSection from "./sections/HeroSection";
-import AboutSection from "./sections/AboutSection";
-import axiosServer from "@/lib/axios";
+import { createOrganizationSchema, createPageMetadata } from "@/lib/seo";
 import ApiError from "@/components/error/ApiError";
+import axiosServer from "@/lib/axios";
+import JsonLd from "@/components/seo/JsonLd";
+
+import AboutSection from "./sections/AboutSection";
+import FollowUsSection from "./sections/FollowUsSection";
+import HeroSection from "./sections/HeroSection";
+import LocationSection from "./sections/LocationSection";
+import OurServicesSection from "./sections/OurServicesSection";
+import ReviewSection from "./sections/ReviewSection";
+import ShopWithUs from "./sections/ShopWithUs";
 
 export const revalidate = 60;
+export const metadata = createPageMetadata({
+  title: "Meow Aesthetics | Nail Salon, Facial & Lash Treatment Singapore",
+  description:
+    "Meow Aesthetics offers gel nails, lash extensions, facials and skin treatments in Marine Parade and Woods Square. Book via WhatsApp today. Open daily 11:30am-7pm.",
+});
 
 const getHeroData = async () => {
   try {
@@ -32,6 +40,7 @@ const Home = async () => {
 
   return (
     <main>
+      <JsonLd data={createOrganizationSchema()} />
       <HeroSection
         desktopUrl={data?.background_image_url}
         mobileUrl={data?.mobile_video_url}
