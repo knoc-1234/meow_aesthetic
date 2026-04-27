@@ -70,7 +70,7 @@ const page = async () => {
               Meow Aesthetics Price List 2026 - Singapore
             </h1>
             <p className="max-w-3xl mx-auto leading-8">
-              Review the full Meow Aesthetics price list in HTML text,
+              Review the full Meow Aesthetics price list,
               including nails, lashes, facials, IPL services, and spa add-ons
               before booking your visit.
             </p>
