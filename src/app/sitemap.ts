@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
-import { getBlogs } from "@/lib/blogs";
+import { getBlogs } from "@/app/actions";
 import { siteUrl } from "@/lib/site-data";
 
 const routes = [
   "",
   "/about",
-  "/blog",
+  "/blogs",
   "/contact",
   "/faqs",
   "/pricelist",
@@ -27,7 +27,7 @@ const routes = [
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
-  const blogs = await getBlogs();
+  const blogs = (await getBlogs({})).filter((blog) => blog.status === "published");
 
   return [
     ...routes.map((path) => ({
@@ -37,8 +37,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: path === "" ? 1 : 0.7,
     })),
     ...blogs.map((blog) => ({
-      url: `${siteUrl}/blog/${blog.slug}`,
-      lastModified: new Date(blog.updated_at || blog.created_at),
+      url: `${siteUrl}/blogs/${blog.slug}`,
+      lastModified: new Date(blog.updated_at || blog.published_at || blog.created_at),
       changeFrequency: "weekly" as const,
       priority: 0.7,
     })),

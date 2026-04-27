@@ -106,7 +106,7 @@ const QuickLinksFooter = () => {
           <Link href="/contact">Contact</Link>
         </li>
         <li>
-          <Link href="/blog">Blog</Link>
+          <Link href="/blogs">Blogs</Link>
         </li>
       </ul>
     </div>

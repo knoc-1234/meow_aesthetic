@@ -50,7 +50,10 @@ const Navbar = ({ onLinkClick }: Props) => {
             {services?.map((service) => (
               <Link
                 key={service.id}
-                href={resolveServicePath({ id: service?.id, slug: service?.slug })}
+                href={resolveServicePath({
+                  id: service?.id,
+                  slug: service?.slug,
+                })}
                 onClick={onLinkClick}
               >
                 {service?.title}
@@ -127,8 +130,8 @@ const Navbar = ({ onLinkClick }: Props) => {
       <Link href="/contact" onClick={onLinkClick}>
         Contact
       </Link>
-      <Link href="/blog" onClick={onLinkClick}>
-        Blog
+      <Link href="/blogs" onClick={onLinkClick}>
+        Blogs
       </Link>
     </nav>
   );
