@@ -41,7 +41,7 @@ const Header = () => {
             <Link href="/" className="min-w-20 aspect-square relative block">
               <Image
                 quality={75}
-                src="/assets/bluelogo.webp"
+                src="/assets/logo.png"
                 alt="meow aesthetics"
                 sizes="80px"
                 decoding="async"
