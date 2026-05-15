@@ -8,7 +8,7 @@ import { businessPhone, sharedFaq, whatsappUrl } from "@/lib/site-data";
 export const metadata = createPageMetadata({
   title: "Contact & Locations | Meow Aesthetics Singapore",
   description:
-    "Find Meow Aesthetics at Marine Parade Central #03-202B and Woods Square Tower 1 #05-62. Open daily. Book via WhatsApp: +65 8771 3358.",
+    "Find Meow Aesthetics at Marine Parade Central #03-202B and Woods Square Tower 1 #06-80. Open daily. Book via WhatsApp: +65 8771 3358.",
   path: "/contact",
 });
 
@@ -42,7 +42,7 @@ const page = () => {
               booking.
             </p>
             <p>
-              Marine Parade Central #03-202B and Woods Square Tower 1 #05-62.
+              Marine Parade Central #03-202B and Woods Square Tower 1 #06-80.
               Open daily 11:30am to 7pm, with late-night appointments available
               at Marine Parade.
             </p>

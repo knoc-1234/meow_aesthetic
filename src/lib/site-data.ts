@@ -20,10 +20,7 @@ export const resolveServicePath = ({
 }) => {
   const numericId = Number(id);
 
-  if (
-    Number.isFinite(numericId) &&
-    numericId in serviceRouteById
-  ) {
+  if (Number.isFinite(numericId) && numericId in serviceRouteById) {
     return serviceRouteById[numericId as keyof typeof serviceRouteById];
   }
 
@@ -39,7 +36,10 @@ export const resolveServicePath = ({
     return "/lashes";
   }
 
-  if (slug === "facial-treatments-singapore-bojin-hydrafacial-more-meow-aesthetics") {
+  if (
+    slug ===
+    "facial-treatments-singapore-bojin-hydrafacial-more-meow-aesthetics"
+  ) {
     return "/facial";
   }
 
@@ -289,7 +289,7 @@ export const locationPages: LocationContent[] = [
       "Beauty Salon Woods Square | Nails, Facials & Lashes - Meow Aesthetics",
     description:
       "Discover Meow Aesthetics Woods Square for gel nails, facials, lash services, and clear booking details for north and northeast Singapore clients.",
-    address: "Woods Square Tower 1 #05-62",
+    address: "Woods Square Tower 1 #06-80",
     locality: "Singapore",
     region: "SG",
     openingHours: ["Mo-Su 11:30-19:00"],
