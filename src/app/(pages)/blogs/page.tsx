@@ -12,7 +12,9 @@ export const metadata = createPageMetadata({
 });
 
 const page = async () => {
-  const blogs = (await getBlogs({})).filter((blog) => blog.status === "published");
+  const blogs = (await getBlogs()).filter(
+    (blog) => blog.status === "published",
+  );
   const sortedBlogs = [...blogs].sort(
     (a, b) =>
       new Date(b.published_at || b.created_at).getTime() -

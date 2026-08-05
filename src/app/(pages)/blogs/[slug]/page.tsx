@@ -5,6 +5,7 @@ import BlogJsonLd from "@/components/seo/BlogJsonLd";
 import { getBlogs } from "@/app/actions";
 import { absoluteUrl, createPageMetadata } from "@/lib/seo";
 import { formatBlogDate, stripHtml, truncateText } from "@/lib/blogs";
+import HtmlContent from "./HtmlContent";
 
 export const revalidate = 60;
 
@@ -13,13 +14,15 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const blogs = (await getBlogs({})).filter((blog) => blog.status === "published");
+  const blogs = (await getBlogs()).filter(
+    (blog) => blog.status === "published",
+  );
   return blogs.map((blog) => ({ slug: blog.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const blog = (await getBlogs({ slug })).find(
+  const blog = (await getBlogs()).find(
     (item) => item.slug === slug && item.status === "published",
   );
 
@@ -41,14 +44,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const page = async ({ params }: Props) => {
   const { slug } = await params;
-  const [blogList, allBlogs] = await Promise.all([getBlogs({ slug }), getBlogs({})]);
-  const blog = blogList.find((item) => item.slug === slug && item.status === "published");
+  const blogList = await getBlogs();
+  const blog = blogList.find(
+    (item) => item.slug === slug && item.status === "published",
+  );
 
   if (!blog) {
     notFound();
   }
 
-  const sortedAllBlogs = allBlogs
+  const sortedAllBlogs = blogList
     .filter((item) => item.status === "published")
     .sort(
       (a, b) =>
@@ -83,13 +88,13 @@ const page = async ({ params }: Props) => {
         <p className="text-sm text-neutral-500">
           Published {formatBlogDate(blog.published_at || blog.created_at)}
         </p>
-        <div
-          className="bg-white border border-neutral-200 rounded-3xl p-6 lg:p-10 prose prose-neutral max-w-none prose-headings:font-[--font-playfair] prose-a:text-black"
-          dangerouslySetInnerHTML={{ __html: blog.content || blog.description || "" }}
-        />
+        <HtmlContent html={blog.content || blog.description || ""} />
 
         <div className="flex flex-wrap gap-3">
-          <Link href="/blogs" className="border border-black px-5 py-3 rounded-full">
+          <Link
+            href="/blogs"
+            className="border border-black px-5 py-3 rounded-full"
+          >
             Back to blog
           </Link>
           <Link
@@ -104,7 +109,9 @@ const page = async ({ params }: Props) => {
       {relatedBlogs.length ? (
         <section className="w-[90%] max-w-6xl mx-auto pb-16">
           <div className="flex flex-col gap-5">
-            <h2 className="text-3xl font-[--font-playfair]">Related articles</h2>
+            <h2 className="text-3xl font-[--font-playfair]">
+              Related articles
+            </h2>
             <div className="grid lg:grid-cols-3 gap-6">
               {relatedBlogs.map((item) => {
                 const itemSummary = item.description || item.content || "";

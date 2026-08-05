@@ -1,19 +1,17 @@
-import "server-only";
 import { BlogDataType } from "@/lib/types";
 
-export const getBlogs = async ({
-  slug = "",
-}: {
-  slug?: string;
-}): Promise<BlogDataType[]> => {
+const blogApiUrl = "https://meow-service-test.flutterclone.com";
+const blogSiteSlug = "samantha-rowe-1785843699";
+
+export const getBlogs = async (): Promise<BlogDataType[]> => {
   try {
     const res = await fetch(
-      `https://manageblog.meowadvancedintelligence.com/api/v1/sites/meowaesthetics/blogs?slug=${slug ?? ""}`,
+      `${blogApiUrl}/api/sites/${blogSiteSlug}/blogs?nopaginate=1`,
       {
-        headers: {
-          "X-API-Key": "meow_blogs_2024_secure_key_8d7f9e2a",
-          "X-API-Token": "meow_blogs_2024_secure_token_x9k2p7m4n6b8v3c1",
-        },
+        // headers: {
+        //     "X-API-Key": "meow_blogs_2024_secure_key_8d7f9e2a",
+        //     "X-API-Token": "meow_blogs_2024_secure_token_x9k2p7m4n6b8v3c1"
+        // },
         next: { revalidate: 1 },
       },
     );
