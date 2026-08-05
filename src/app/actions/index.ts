@@ -1,7 +1,7 @@
 import { BlogDataType } from "@/lib/types";
 
-const blogApiUrl = "https://meow-service-test.flutterclone.com";
-const blogSiteSlug = "samantha-rowe-1785843699";
+const blogApiUrl = "https://lemeowapis.meowadvancedintelligence.com";
+const blogSiteSlug = "meowaesthetics-1785928248";
 
 export const getBlogs = async (): Promise<BlogDataType[]> => {
   try {
