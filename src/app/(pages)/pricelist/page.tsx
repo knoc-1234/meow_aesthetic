@@ -114,7 +114,7 @@ const page = async () => {
                       <div>
                         <p className="font-medium">{item.title}</p>
                       </div>
-                      <span className="font-semibold">SGD {item.price}</span>
+                      <span className="font-semibold whitespace-nowrap">SGD {item.price}</span>
                     </li>
                   ))}
                 </ul>
