@@ -84,6 +84,23 @@ export const priceListSections: PriceListSection[] = [
   },
 
   {
+    title: "Brow Embroidery Price List",
+    items: [
+      { title: "Basic Embroidery", price: "599" },
+      { title: "First Time Trial", price: "388" },
+      { title: "Touch Up", price: "200" },
+    ],
+  },
+
+  {
+    title: "Lip Embroidery Price List",
+    items: [
+      { title: "Basic", price: "799" },
+      { title: "First Time Trial", price: "588" },
+      { title: "Touch Up", price: "250 to 288" },
+    ],
+  },
+  {
     title: "Nail Services Price List",
     items: [
       { title: "Express Gel Mani", price: "30" },
@@ -145,24 +162,6 @@ export const priceListSections: PriceListSection[] = [
         title: "Classic Gel Mani + Classic Gel Pedi With Hand And Foot Spa",
         price: "108",
       },
-    ],
-  },
-
-  {
-    title: "Brow Embroidery Price List",
-    items: [
-      { title: "Basic Embroidery", price: "599" },
-      { title: "First Time Trial", price: "388" },
-      { title: "Touch Up", price: "200" },
-    ],
-  },
-
-  {
-    title: "Lip Embroidery Price List",
-    items: [
-      { title: "Basic", price: "799" },
-      { title: "First Time Trial", price: "588" },
-      { title: "Touch Up", price: "250 to 288" },
     ],
   },
 ];
