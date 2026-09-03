@@ -27,7 +27,7 @@ const OurServicesSection = async () => {
         />
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-8 px-5 lg:gap-10">
+      <div className="relative mx-auto flex w-full sm:max-w-[75%] flex-col gap-8 px-5 lg:gap-10">
         <h2 className="text-4xl lg:text-5xl text-center py-5 font-[--font-playfair]">
           Our Services
         </h2>

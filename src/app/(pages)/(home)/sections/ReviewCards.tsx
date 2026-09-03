@@ -21,7 +21,7 @@ const ReviewCards = ({ data }: { data: ReviewCardData[] }) => {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (reviewRef.current) {
@@ -34,7 +34,7 @@ const ReviewCards = ({ data }: { data: ReviewCardData[] }) => {
   }, []);
 
   return (
-    <div className="w-[75%] mx-auto py-10 flex flex-col gap-10 relative z-10">
+    <div className="w-full sm:max-w-[75%] mx-auto py-10 px-2 flex flex-col gap-10 relative z-10">
       {/* Heading */}
       <div className="text-center flex flex-col gap-2">
         <i className="text-xl">Customer Satisfactory</i>

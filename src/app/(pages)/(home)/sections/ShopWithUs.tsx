@@ -12,7 +12,7 @@ const ShopWithUs = async () => {
 
   return (
     <section className="w-full bg-white">
-      <div className="w-[75%] mx-auto py-14 flex flex-col gap-10 relative">
+      <div className="w-full sm:max-w-[75%] mx-auto py-14 flex flex-col gap-10 relative">
         <h2 className="font-semibold text-4xl lg:text-5xl text-center font-[--font-playfair]">
           Shop With Us
         </h2>

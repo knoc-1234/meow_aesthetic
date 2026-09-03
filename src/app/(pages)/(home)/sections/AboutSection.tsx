@@ -42,7 +42,7 @@ const AboutSection = ({
     <section className="w-full min-h-full grid lg:grid-cols-2 gap-10 relative">
       <div
         ref={sectionRef}
-        className={`w-full lg:w-[70%] mx-auto flex flex-col gap-7 p-10 2xl:p-20 transition-all duration-1000 delay-200 ease-in-out ${
+        className={`w-full lg:w-[70%] mx-auto flex flex-col gap-7 p-4 sm:p-10 2xl:p-20 transition-all duration-1000 delay-200 ease-in-out ${
           isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
         }`}
       >
