@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import ProductQuickViewPopup from "./ProductQuickViewPopup";
 import Link from "next/link";
+import { formatProductPrice } from "@/lib/product-utils";
 
 const ShopProductCard = ({
   addtoCart,
@@ -14,7 +15,7 @@ const ShopProductCard = ({
   addtoCart?: boolean;
   title: string;
   description: string;
-  price: number;
+  price: string;
   imageUrl: string;
 }) => {
   //product popup
@@ -58,7 +59,7 @@ const ShopProductCard = ({
           </div>
         </div>
         <p>{title}</p>
-        <p className="text-gray-500">$ {price}</p>
+        <p className="text-gray-500">{formatProductPrice(price)}</p>
         {addtoCart && (
           <Link
             href={"/contact"}

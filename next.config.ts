@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "admin-panel.meowaesthetics.com",
       },
+      {
+        protocol: "https",
+        hostname: "meow-service-test.flutterclone.com",
+      },
     ],
   },
   typescript: {

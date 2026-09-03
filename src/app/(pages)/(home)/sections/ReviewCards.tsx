@@ -6,12 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import ReviewCard from "../components/ReviewCard";
 import { useEffect, useRef, useState } from "react";
+import type { ReviewCardData } from "@/lib/site-reviews";
 
-type Review = {
-  image_url: string;
-};
-
-const ReviewCards = ({ data }: { data: Review[] }) => {
+const ReviewCards = ({ data }: { data: ReviewCardData[] }) => {
   //
   const reviewRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -80,12 +77,10 @@ const ReviewCards = ({ data }: { data: Review[] }) => {
         className="w-full"
       >
         {data?.length > 0 ? (
-          data?.map((e, index) => (
-            <>
-              <SwiperSlide className="w-full" key={index}>
-                <ReviewCard imageUrl={e?.image_url} />
-              </SwiperSlide>
-            </>
+          data?.map((review) => (
+            <SwiperSlide className="w-full" key={review.id}>
+              <ReviewCard review={review} />
+            </SwiperSlide>
           ))
         ) : (
           <p className="text-center w-full">No reviews available</p>

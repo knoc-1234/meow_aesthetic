@@ -1,54 +1,35 @@
-import axiosServer from "@/lib/axios";
 import ShopProductCard from "../(home)/components/ShopProductCard";
 import ApiError from "@/components/error/ApiError";
+import {
+  getProductImage,
+  type SiteProduct,
+} from "@/lib/product-utils";
+import { getSiteProducts } from "@/lib/site-products";
 
 export const revalidate = 60;
 
-type Product = {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  type: string;
-  image_url: string;
-};
-
-interface ProductApiResponse {
-  success: boolean;
-  data: Product[];
-}
-
-const getProductData = async (): Promise<ProductApiResponse | null> => {
-  try {
-    const res = await axiosServer.get("/api_product_list");
-    return res.data;
-  } catch (error) {
-    console.error("Failed to fetch product data:", error);
-    return null;
-  }
-};
-
-const groupByType = (products: Product[]) => {
+const groupByType = (products: SiteProduct[]) => {
   return products.reduce(
     (acc, product) => {
-      if (!acc[product.type]) {
-        acc[product.type] = [];
+      const type = product.category_name || product.brand_name || "Products";
+
+      if (!acc[type]) {
+        acc[type] = [];
       }
-      acc[product.type].push(product);
+      acc[type].push(product);
       return acc;
     },
-    {} as Record<string, Product[]>,
+    {} as Record<string, SiteProduct[]>,
   );
 };
 
 const Product = async () => {
-  const productData = await getProductData();
+  const data = await getSiteProducts();
 
-  if (!productData) {
+  if (!data) {
     return <ApiError />;
   }
 
-  const data = productData?.data;
   const groupedProducts = data ? groupByType(data) : {};
 
   return (
@@ -68,10 +49,10 @@ const Product = async () => {
               {products.map((product) => (
                 <ShopProductCard
                   key={product.id}
-                  title={product.title}
-                  description={product.description}
-                  price={product.price}
-                  imageUrl={product.image_url}
+                  title={product.name}
+                  description={product.description || ""}
+                  price={product.price || ""}
+                  imageUrl={getProductImage(product)}
                   addtoCart={true}
                 />
               ))}

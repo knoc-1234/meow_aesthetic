@@ -1,22 +1,12 @@
-import axiosServer from "@/lib/axios";
 import ProductsSection from "./ProductsSection";
 import ApiError from "@/components/error/ApiError";
-
-const getProductData = async () => {
-  try {
-    const res = await axiosServer.get("/api_product_list");
-    return res.data;
-  } catch (error) {
-    console.error("Failed to fetch product data:", error);
-    return null;
-  }
-};
+import { getSiteProducts } from "@/lib/site-products";
 
 const ShopWithUs = async () => {
   //
-  const productData = await getProductData();
+  const products = await getSiteProducts();
 
-  if (!productData) {
+  if (!products) {
     return <ApiError />;
   }
 
@@ -26,7 +16,7 @@ const ShopWithUs = async () => {
         <h2 className="font-semibold text-4xl lg:text-5xl text-center font-[--font-playfair]">
           Shop With Us
         </h2>
-        <ProductsSection data={productData?.data} />
+        <ProductsSection data={products} />
       </div>
     </section>
   );

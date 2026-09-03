@@ -2,6 +2,7 @@ import Image from "next/image";
 import ReactDOM from "react-dom";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { formatProductPrice } from "@/lib/product-utils";
 
 const ProductQuickViewPopup = ({
   setShowPopup,
@@ -12,7 +13,7 @@ const ProductQuickViewPopup = ({
 }: {
   setShowPopup: (value: boolean) => void;
   title: string;
-  price: number;
+  price: string;
   description: string;
   imageUrl: string;
 }) => {
@@ -74,7 +75,7 @@ const ProductQuickViewPopup = ({
           <div className="flex flex-col gap-5 justify-between overflow-auto max-h-96">
             <div className="flex flex-col gap-2">
               <h3>{title}</h3>
-              <p>$ {price}</p>
+              <p>{formatProductPrice(price)}</p>
               <p>{description}</p>
             </div>
             <Link

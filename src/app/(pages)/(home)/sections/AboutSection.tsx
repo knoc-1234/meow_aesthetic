@@ -54,19 +54,7 @@ const AboutSection = ({
           {data?.subtitle || "Nail Salon Marine Parade & Woods Square"}
         </h2>
         <p>{data?.description}</p>
-        <div className="flex flex-wrap gap-4">
-          <Link
-            href={"/gel-nails-price"}
-            className="bg-[#B9B9B9] w-fit px-8 py-3.5 border border-[#000] text-white text-center"
-          >
-            Gel Nails Prices
-          </Link>
-          <Link
-            href={"/marine-parade"}
-            className="bg-white w-fit px-8 py-3.5 border border-[#000] text-black text-center"
-          >
-            Marine Parade Location
-          </Link>
+        <div className="flex flex-wrap gap-4"> 
           <Link
             href={"/about"}
             className="bg-white w-fit px-8 py-3.5 border border-[#000] text-black text-center"

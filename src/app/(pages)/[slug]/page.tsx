@@ -35,7 +35,9 @@ export type ServiceData = {
   }[];
 };
 
-const getServiceDetailsData = async (id: string) => {
+const getServiceDetailsData = async (
+  id: string,
+): Promise<{ data: ServiceData[] } | null> => {
   try {
     const res = await axiosServer.post("/api_service_details_list", { id });
     return res.data;

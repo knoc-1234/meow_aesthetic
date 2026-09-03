@@ -1,24 +1,14 @@
 import Image from "next/image";
 import reviewbg from "@/../public/assets/homeReviewBg.png";
 import ReviewCards from "./ReviewCards";
-import axiosServer from "@/lib/axios";
 import ApiError from "@/components/error/ApiError";
-
-const getReviewData = async () => {
-  try {
-    const res = await axiosServer.get("/api_review_list");
-    return res.data;
-  } catch (error) {
-    console.error("Failed to fetch review data:", error);
-    return null;
-  }
-};
+import { getSiteReviews } from "@/lib/site-reviews";
 
 const ReviewSection = async () => {
   //
-  const reviewData = await getReviewData();
+  const reviews = await getSiteReviews();
 
-  if (!reviewData) {
+  if (!reviews) {
     return <ApiError />;
   }
 
@@ -37,7 +27,7 @@ const ReviewSection = async () => {
       </div>
 
       {/* Main Container */}
-      <ReviewCards data={reviewData?.data} />
+      <ReviewCards data={reviews} />
     </section>
   );
 };

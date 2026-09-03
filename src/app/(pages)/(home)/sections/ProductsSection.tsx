@@ -7,15 +7,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useState, useRef } from "react";
 import { Swiper as SwiperType } from "swiper";
+import { getProductImage, type SiteProduct } from "@/lib/product-utils";
 
-type Product = {
-  title: string;
-  description: string;
-  price: number;
-  image_url: string;
-};
-
-const ProductsSection = ({ data }: { data: Product[] }) => {
+const ProductsSection = ({ data }: { data: SiteProduct[] }) => {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef<SwiperType | null>(null);
@@ -69,10 +63,10 @@ const ProductsSection = ({ data }: { data: Product[] }) => {
           data.map((e, index) => (
             <SwiperSlide key={index} className="w-full">
               <ShopProductCard
-                title={e.title}
-                description={e.description}
-                price={e.price}
-                imageUrl={e.image_url}
+                title={e.name}
+                description={e.description || ""}
+                price={e.price || ""}
+                imageUrl={getProductImage(e)}
               />
             </SwiperSlide>
           ))
