@@ -10,6 +10,7 @@ type MetadataInput = {
   title: string;
   description: string;
   path?: string;
+  image?: string;
 };
 
 export const absoluteUrl = (path = "/") =>
@@ -19,6 +20,7 @@ export const createPageMetadata = ({
   title,
   description,
   path = "/",
+  image,
 }: MetadataInput): Metadata => ({
   title,
   description,
@@ -32,11 +34,13 @@ export const createPageMetadata = ({
     siteName: businessName,
     locale: "en_SG",
     type: "website",
+    ...(image ? { images: [{ url: image }] } : {}),
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    ...(image ? { images: [image] } : {}),
   },
 });
 

@@ -9,3 +9,36 @@
 body {
   font-family: var(--font-geist-sans);
 }
+
+/* --- BlockNote blog body (HtmlContent) --- */
+.blog-content .bn-editor {
+  padding-inline: 0;
+  background-color: transparent;
+  color: #2f2f2f;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.blog-content .bn-block-content {
+  padding: 0.4rem 0;
+}
+
+.blog-content [data-content-type="heading"] {
+  padding-top: 1.6rem;
+}
+
+.blog-content .bn-editor a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.blog-content .bn-block-content[data-content-type="bulletListItem"],
+.blog-content .bn-block-content[data-content-type="numberedListItem"] {
+  padding: 0.2rem 0;
+}

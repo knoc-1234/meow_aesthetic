@@ -28,7 +28,7 @@ const routes = [
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
-  const blogs = (await getBlogs({})).filter((blog) => blog.status === "published");
+  const blogs = (await getBlogs()).filter((blog) => blog.status === "published");
 
   return [
     ...routes.map((path) => ({
