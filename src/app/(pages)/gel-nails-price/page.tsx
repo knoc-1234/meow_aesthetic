@@ -24,8 +24,7 @@ const page = async () => {
       intro="Compare Meow Aesthetics gel nail prices before booking. Our nail services cover classic gel manicures and pedicures, structured extensions, chrome and cat eye finishes, ombre blends, marble nail art, and spa add-ons, with appointments available at Marine Parade and Woods Square."
       path="/gel-nails-price"
       schemaDescription="Gel nails price page for Meow Aesthetics in Singapore with manicure, pedicure, extension, and nail art pricing."
-      ctaHref="https://wa.me/6587713358?text=Hi%20Meow%20Aesthetics%2C%20I%20want%20to%20book%20a%20gel%20nails%20appointment."
-      ctaLabel="Book Gel Nails On WhatsApp"
+      ctaLabel="Book Gel Nails"
       secondaryLinks={[
         { href: "/marine-parade", label: "Marine Parade location" },
         { href: "/nail-art-designs", label: "See nail art gallery" },

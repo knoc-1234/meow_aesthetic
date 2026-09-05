@@ -6,7 +6,7 @@ import { getServiceCategoryData } from "@/lib/service-pricing";
 export const metadata = createPageMetadata({
   title: "Lash Extensions Singapore Price | Meow Aesthetics",
   description:
-    "See lash extension and lash lift prices at Meow Aesthetics in Singapore, with styles, treatment options, Marine Parade access, and WhatsApp booking.",
+    "See lash extension and lash lift prices at Meow Aesthetics in Singapore, with styles, treatment options, Marine Parade access, and Le Meow app booking.",
   path: "/lash-extensions-singapore",
 });
 
@@ -24,7 +24,6 @@ const page = async () => {
       intro="Review Meow Aesthetics lash extension and lash lift prices before booking. From classic and natural looks to wispy, wetlook, and volume styles, this page brings together treatment options, pricing, and location details for visitors ready to compare and book."
       path="/lash-extensions-singapore"
       schemaDescription="Lash extensions Singapore price page for Meow Aesthetics with lash lift, lash extension styles, and booking information."
-      ctaHref="https://wa.me/6587713358?text=Hi%20Meow%20Aesthetics%2C%20I%20want%20to%20book%20lash%20extensions."
       ctaLabel="Book Lash Extensions"
       secondaryLinks={[
         { href: "/marine-parade", label: "Marine Parade location" },
@@ -50,7 +49,7 @@ const page = async () => {
         {
           question: "Where can I book lash appointments?",
           answer:
-            "Lash appointments can be arranged through WhatsApp and are associated with Marine Parade and Woods Square booking options.",
+            "Lash appointments can be arranged through the Le Meow app and are associated with Marine Parade and Woods Square booking options.",
         },
       ]}
       locationCardTitle="Lash Booking Options"

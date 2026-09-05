@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import AppDownloadModalButton, {
+  AppDownloadModal,
+} from "@/components/booking/AppDownloadModalButton";
 import ProductQuickViewPopup from "./ProductQuickViewPopup";
-import Link from "next/link";
 import { formatProductPrice } from "@/lib/product-utils";
 
 const ShopProductCard = ({
@@ -20,6 +22,7 @@ const ShopProductCard = ({
 }) => {
   //product popup
   const [showPopup, setShowPopup] = useState(false);
+  const [showBuyModal, setShowBuyModal] = useState(false);
 
   // Prevent scroll when Popup is open
   useEffect(() => {
@@ -34,6 +37,11 @@ const ShopProductCard = ({
       document.body.classList.remove("overflow-hidden");
     };
   }, [showPopup]);
+
+  const openBuyModalFromQuickView = () => {
+    setShowPopup(false);
+    window.setTimeout(() => setShowBuyModal(true), 0);
+  };
 
   return (
     <>
@@ -61,24 +69,32 @@ const ShopProductCard = ({
         <p>{title}</p>
         <p className="text-gray-500">{formatProductPrice(price)}</p>
         {addtoCart && (
-          <Link
-            href={"/contact"}
+          <AppDownloadModalButton
+            modalTitle="buy now on the le meow app"
+            modalDescription="Download the app to browse luxury products, place your order, and manage your Le Meow shopping experience."
             className="bg-[#76747B] text-white p-2 rounded-full my-2 text-center"
           >
-            <button className="cursor-pointer">Contact Us to Buy</button>
-          </Link>
+            Buy Now
+          </AppDownloadModalButton>
         )}
       </div>
 
       {showPopup && (
         <ProductQuickViewPopup
           setShowPopup={setShowPopup}
+          onBuyNow={openBuyModalFromQuickView}
           title={title}
           price={price}
           description={description}
           imageUrl={imageUrl}
         />
       )}
+      <AppDownloadModal
+        isOpen={showBuyModal}
+        onClose={() => setShowBuyModal(false)}
+        modalTitle="buy now on the le meow app"
+        modalDescription="Download the app to browse luxury products, place your order, and manage your Le Meow shopping experience."
+      />
     </>
   );
 };

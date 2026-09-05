@@ -2,7 +2,10 @@ export const siteUrl = "https://meowaesthetics.com";
 export const businessName = "Meow Aesthetics";
 export const businessPhone = "+65 8771 3358";
 export const businessEmail = "meowaestheticssg@gmail.com";
-export const whatsappUrl = "https://wa.me/6587713358";
+export const appStoreUrl =
+  "https://apps.apple.com/my/app/le-meow/id6763483119";
+export const googlePlayUrl =
+  "https://play.google.com/store/apps/details?id=com.meow.lemeow";
 
 export const serviceRouteById = {
   2: "/nails",
@@ -85,7 +88,7 @@ export type LocationContent = {
 
 export const homepageIntro = [
   "Located at Marine Parade Central and Woods Square, Meow Aesthetics is a Singapore beauty destination for gel nails, facials, lash treatments, and personalised skin services. Clients visit us for long-lasting gel manicures, Bojin Meridian facials, hydrating facial treatments, lash lifts, lash extensions, and polished service in a welcoming studio environment.",
-  "We regularly welcome clients from Marine Parade, Bedok, Tampines, and the east side of Singapore, and we also serve customers travelling from Punggol and other parts of the island. From unlimited nail art and chrome finishes to acne-friendly facials and lash styling, every appointment is designed to feel personal, polished, and easy to book through WhatsApp.",
+  "We regularly welcome clients from Marine Parade, Bedok, Tampines, and the east side of Singapore, and we also serve customers travelling from Punggol and other parts of the island. From unlimited nail art and chrome finishes to acne-friendly facials and lash styling, every appointment is designed to feel personal, polished, and easy to book through the Le Meow app.",
 ];
 
 export const sharedFaq = [
@@ -102,7 +105,7 @@ export const sharedFaq = [
   {
     question: "Do you accept walk-ins?",
     answer:
-      "Walk-ins are welcome subject to availability, but booking ahead on WhatsApp is recommended if you want your preferred timeslot or a same-day appointment.",
+      "Walk-ins are welcome subject to availability, but booking ahead through the Le Meow app is recommended if you want your preferred timeslot or a same-day appointment.",
   },
 ];
 
@@ -175,7 +178,7 @@ export const serviceSeoContent = {
     serviceId: 3,
     metadataTitle: "Lash Extensions & Lash Lift Singapore - Meow Aesthetics",
     metadataDescription:
-      "Professional lash extensions and lash lifts at Meow Aesthetics, Marine Parade & Woods Square. Achieve your dream lashes — book via WhatsApp today.",
+      "Professional lash extensions and lash lifts at Meow Aesthetics, Marine Parade & Woods Square. Achieve your dream lashes by booking through the Le Meow app.",
     h1: "Lash Extensions & Lash Lift Singapore - Meow Aesthetics",
     intro:
       "Whether you want a clean lash lift, classic lash extensions, or fuller volume sets, Meow Aesthetics offers lash services in Singapore designed around comfort, style, and retention. Clients can explore styles, prices, and treatment durations before booking the look that suits their routine, face shape, and maintenance preference.",
@@ -244,7 +247,7 @@ export const locationPages: LocationContent[] = [
     title:
       "Nail Salon Marine Parade | Facial & Lash Treatments - Meow Aesthetics",
     description:
-      "Visit Meow Aesthetics Marine Parade for gel nails, facials, lash treatments, pricing, opening hours, and WhatsApp booking details.",
+      "Visit Meow Aesthetics Marine Parade for gel nails, facials, lash treatments, pricing, opening hours, and Le Meow app booking details.",
     address: "86 Marine Parade Central #03-202B",
     locality: "Singapore",
     region: "SG",
@@ -306,7 +309,7 @@ export const locationPages: LocationContent[] = [
       "Convenient booking for Woods Square and Woodlands clients",
       "Transparent pricing for nails, facials, and lash services",
       "Suitable for weekday and after-work appointments",
-      "WhatsApp CTA for same-day appointment enquiries",
+      "Le Meow app booking for same-day appointment enquiries",
     ],
     nearbyAreas: ["Woods Square", "Woodlands", "Admiralty", "North Singapore"],
     faq: [
@@ -330,7 +333,7 @@ export const locationPages: LocationContent[] = [
     title:
       "Nail Salon & Beauty Services Near Punggol | Meow Aesthetics Singapore",
     description:
-      "Serving Punggol clients with gel nails, facials, lash treatments, pricing, route details, FAQs, and direct WhatsApp booking from Meow Aesthetics Singapore.",
+      "Serving Punggol clients with gel nails, facials, lash treatments, pricing, route details, FAQs, and Le Meow app booking from Meow Aesthetics Singapore.",
     address: "Serving Punggol clients from Marine Parade and Woods Square",
     locality: "Singapore",
     region: "SG",
@@ -347,7 +350,7 @@ export const locationPages: LocationContent[] = [
     bookingMessage: "Hi, I am based in Punggol and would like to book...",
     serviceHighlights: [
       "Serving clients from Punggol and across Northeast Singapore",
-      "Direct WhatsApp booking for Punggol enquiries",
+      "Le Meow app booking for Punggol enquiries",
       "Easy route options to Marine Parade and Woods Square",
       "Popular gel nails, facials, and lash treatments in one place",
     ],
@@ -377,7 +380,7 @@ export const locationPages: LocationContent[] = [
       {
         question: "Can I book gel nails or facials if I live in Punggol?",
         answer:
-          "Yes. Punggol clients can book gel nails, facials, lash treatments, and other beauty services through WhatsApp before visiting the location that suits them best.",
+          "Yes. Punggol clients can book gel nails, facials, lash treatments, and other beauty services through the Le Meow app before visiting the location that suits them best.",
       },
     ],
   },

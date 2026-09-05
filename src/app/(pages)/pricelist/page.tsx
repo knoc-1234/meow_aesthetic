@@ -1,10 +1,10 @@
 import { createPageMetadata, createServiceSchema } from "@/lib/seo";
+import AppDownloadModalButton from "@/components/booking/AppDownloadModalButton";
 import ApiError from "@/components/error/ApiError";
 import JsonLd from "@/components/seo/JsonLd";
 import {
   getAllSitePackages,
   formatSgd,
-  serviceBookingHref,
   type SiteServicePackage,
 } from "@/lib/site-services";
 
@@ -109,14 +109,11 @@ const page = async () => {
                     <p className="font-semibold">
                       {formatSgd(pkg.final_price || pkg.price)}
                     </p>
-                    <a
-                      href={serviceBookingHref(pkg.name)}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <AppDownloadModalButton
                       className="border bg-gradient-to-t from-[#A3A3A3] to-[#C7C7C7] px-5 py-2 text-sm text-white transition-all duration-300 hover:border-black hover:from-white hover:to-white hover:text-black"
                     >
                       Book Now
-                    </a>
+                    </AppDownloadModalButton>
                   </div>
                 </article>
               ))}

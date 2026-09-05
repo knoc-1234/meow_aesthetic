@@ -4,13 +4,13 @@ import type { Metadata } from "next";
 
 import ServicePackageCard from "@/components/services/ServicePackageCard";
 import JsonLd from "@/components/seo/JsonLd";
+import AppDownloadModalButton from "@/components/booking/AppDownloadModalButton";
 import { createPageMetadata, createServiceSchema } from "@/lib/seo";
 import {
   formatSgd,
   getServiceImage,
   getSiteServiceBySlug,
   getSiteServicePackages,
-  serviceBookingHref,
 } from "@/lib/site-services";
 
 export const revalidate = 60;
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${service.name} | Meow Aesthetics Singapore`,
     description:
       service.description ||
-      `Book ${service.name} at Meow Aesthetics Singapore through WhatsApp.`,
+      `Book ${service.name} at Meow Aesthetics Singapore through the Le Meow app.`,
     path: `/services/${service.slug}`,
   });
 }
@@ -119,14 +119,11 @@ const ServiceDetailsPage = async ({ params }: Props) => {
             </div>
           </div>
 
-          <a
-            href={serviceBookingHref(service.name)}
-            target="_blank"
-            rel="noopener noreferrer"
+          <AppDownloadModalButton
             className="w-fit border bg-gradient-to-t from-[#A3A3A3] to-[#C7C7C7] px-8 py-3 text-white transition-all duration-300 hover:border-black hover:from-white hover:to-white hover:text-black"
           >
             Book Now
-          </a>
+          </AppDownloadModalButton>
         </div>
       </section>
 
@@ -137,8 +134,8 @@ const ServiceDetailsPage = async ({ params }: Props) => {
               Packages
             </h2>
             <p className="mt-4 max-w-2xl leading-7 text-neutral-600">
-              Choose a package for {service.name} and book directly through
-              WhatsApp.
+              Choose a package for {service.name} and book through the Le Meow
+              app.
             </p>
           </div>
 

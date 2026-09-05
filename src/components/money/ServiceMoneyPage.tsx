@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AppDownloadModalButton from "@/components/booking/AppDownloadModalButton";
 import JsonLd from "@/components/seo/JsonLd";
 import { createFaqSchema, createServiceSchema } from "@/lib/seo";
 import {
@@ -13,7 +14,6 @@ type ServiceMoneyPageProps = {
   intro: string;
   path: string;
   schemaDescription: string;
-  ctaHref: string;
   ctaLabel: string;
   secondaryLinks: Array<{ href: string; label: string }>;
   services: ServiceDetailCard[];
@@ -33,7 +33,6 @@ const ServiceMoneyPage = ({
   intro,
   path,
   schemaDescription,
-  ctaHref,
   ctaLabel,
   secondaryLinks,
   services,
@@ -71,12 +70,11 @@ const ServiceMoneyPage = ({
           </h1>
           <p className="text-base lg:text-lg leading-8">{intro}</p>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href={ctaHref}
+            <AppDownloadModalButton
               className="bg-black text-white px-6 py-3 rounded-full"
             >
               {ctaLabel}
-            </Link>
+            </AppDownloadModalButton>
             {secondaryLinks.map((link) => (
               <Link
                 key={link.href}

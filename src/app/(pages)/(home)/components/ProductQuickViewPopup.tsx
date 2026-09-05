@@ -1,17 +1,18 @@
 import Image from "next/image";
 import ReactDOM from "react-dom";
 import { useEffect, useRef } from "react";
-import Link from "next/link";
 import { formatProductPrice } from "@/lib/product-utils";
 
 const ProductQuickViewPopup = ({
   setShowPopup,
+  onBuyNow,
   title,
   price,
   description,
   imageUrl,
 }: {
   setShowPopup: (value: boolean) => void;
+  onBuyNow: () => void;
   title: string;
   price: string;
   description: string;
@@ -78,12 +79,13 @@ const ProductQuickViewPopup = ({
               <p>{formatProductPrice(price)}</p>
               <p>{description}</p>
             </div>
-            <Link
-              href={"/contact"}
+            <button
+              type="button"
+              onClick={onBuyNow}
               className="bg-[#76747B] text-white p-2 rounded-full my-2 text-center"
             >
-              <button className="cursor-pointer">Contact Us to Buy</button>
-            </Link>
+              Buy Now
+            </button>
           </div>
         </div>
       </div>

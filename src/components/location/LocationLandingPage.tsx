@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import AppDownloadModalButton from "@/components/booking/AppDownloadModalButton";
 import JsonLd from "@/components/seo/JsonLd";
 import { createFaqSchema, createLocationSchema } from "@/lib/seo";
-import { LocationContent, businessPhone, whatsappUrl } from "@/lib/site-data";
+import { LocationContent, businessPhone } from "@/lib/site-data";
 import { ServiceGalleryItem, ServiceMenuGroup } from "@/lib/service-pricing";
 
 type LocationLandingPageProps = {
@@ -17,9 +18,6 @@ const LocationLandingPage = ({
   photoGallery,
 }: LocationLandingPageProps) => {
   const schema = createLocationSchema(location.slug);
-  const whatsappMessage =
-    location.bookingMessage ||
-    `Hi Meow Aesthetics, I want to book at ${location.shortName}.`;
   const menuGroups = serviceMenuGroups || location.serviceMenuGroups;
   const galleryItems = photoGallery || location.photoGallery;
   const isPhysicalLocation = location.isPhysicalLocation !== false;
@@ -39,12 +37,11 @@ const LocationLandingPage = ({
           </h1>
           <p className="text-base lg:text-lg leading-8">{location.heroIntro}</p>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href={`${whatsappUrl}?text=${encodeURIComponent(whatsappMessage)}`}
+            <AppDownloadModalButton
               className="bg-black text-white px-6 py-3 rounded-full"
             >
-              Book on WhatsApp
-            </Link>
+              Book on Le Meow
+            </AppDownloadModalButton>
             <Link
               href={location.mapUrl}
               target="_blank"

@@ -24,7 +24,6 @@ const page = async () => {
       intro="Book facial treatments near Marine Parade with Meow Aesthetics, including Bojin Meridian Facial, Hydrafacial with Serum, deep cleansing facial options, hydration treatments, and anti-ageing care. This page brings together the treatments, prices, and location details that booking-intent visitors usually need before messaging the salon."
       path="/facial-marine-parade"
       schemaDescription="Marine Parade facial packages page for Meow Aesthetics with prices, Hydrafacial, Bojin Meridian Facial, and booking information."
-      ctaHref="https://wa.me/6587713358?text=Hi%20Meow%20Aesthetics%2C%20I%20want%20to%20book%20a%20facial%20at%20Marine%20Parade."
       ctaLabel="Book A Marine Parade Facial"
       secondaryLinks={[
         { href: "/marine-parade", label: "Marine Parade location" },

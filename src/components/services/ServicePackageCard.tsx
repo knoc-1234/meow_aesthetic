@@ -1,9 +1,9 @@
 import Image from "next/image";
 
+import AppDownloadModalButton from "@/components/booking/AppDownloadModalButton";
 import {
   formatSgd,
   getPackageImage,
-  serviceBookingHref,
   type SiteServicePackage,
 } from "@/lib/site-services";
 
@@ -63,14 +63,11 @@ const ServicePackageCard = ({ servicePackage }: ServicePackageCardProps) => {
           <p className="font-semibold">
             {formatSgd(servicePackage.final_price || servicePackage.price)}
           </p>
-          <a
-            href={serviceBookingHref(servicePackage.name)}
-            target="_blank"
-            rel="noopener noreferrer"
+          <AppDownloadModalButton
             className="border bg-gradient-to-t from-[#A3A3A3] to-[#C7C7C7] px-5 py-2 text-sm text-white transition-all duration-300 hover:border-black hover:from-white hover:to-white hover:text-black"
           >
             Book Now
-          </a>
+          </AppDownloadModalButton>
         </div>
       </div>
     </article>

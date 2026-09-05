@@ -8,7 +8,7 @@ export const revalidate = 60;
 export const metadata = createPageMetadata({
   title: "Services | Meow Aesthetics Singapore",
   description:
-    "Explore all Meow Aesthetics services in Singapore, including nails, lashes, facials, body treatments, spa treatments and book through WhatsApp.",
+    "Explore all Meow Aesthetics services in Singapore, including nails, lashes, facials, body treatments, spa treatments and book through the Le Meow app.",
   path: "/services",
 });
 
@@ -27,7 +27,7 @@ const ServicesPage = async () => {
           </h1>
           <p className="mt-5 leading-7 text-neutral-600">
             Browse Meow Aesthetics services and book your preferred treatment
-            through WhatsApp.
+            through the Le Meow app.
           </p>
         </div>
 

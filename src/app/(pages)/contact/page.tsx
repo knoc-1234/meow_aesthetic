@@ -3,12 +3,12 @@ import ContactForm from "./components/ContactForm";
 import Link from "next/link";
 import JsonLd from "@/components/seo/JsonLd";
 import { createFaqSchema, createPageMetadata } from "@/lib/seo";
-import { businessPhone, sharedFaq, whatsappUrl } from "@/lib/site-data";
+import { businessPhone, sharedFaq } from "@/lib/site-data";
 
 export const metadata = createPageMetadata({
   title: "Contact & Locations | Meow Aesthetics Singapore",
   description:
-    "Find Meow Aesthetics at Marine Parade Central #03-202B and Woods Square Tower 1 #06-80. Open daily. Book via WhatsApp: +65 8771 3358.",
+    "Find Meow Aesthetics at Marine Parade Central #03-202B and Woods Square Tower 1 #06-80. Open daily. WhatsApp: +65 8771 3358.",
   path: "/contact",
 });
 
@@ -48,16 +48,18 @@ const page = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href={whatsappUrl}
+                href={`tel:${businessPhone.replace(/\s/g, "")}`}
                 className="bg-black text-white px-6 py-3 rounded-full"
               >
-                Book via WhatsApp
+                Call {businessPhone}
               </Link>
               <Link
-                href={`tel:${businessPhone.replace(/\s/g, "")}`}
+                href={`https://wa.me/${businessPhone.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border border-black px-6 py-3 rounded-full"
               >
-                Call {businessPhone}
+                WhatsApp
               </Link>
             </div>
           </div>

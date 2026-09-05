@@ -188,8 +188,3 @@ export const formatSgd = (value?: string | number | null) => {
     maximumFractionDigits: amount % 1 === 0 ? 0 : 2,
   }).format(amount);
 };
-
-export const serviceBookingHref = (name: string) =>
-  `https://wa.me/6587713358?text=${encodeURIComponent(
-    `Hi Meow Aesthetics, I want to book ${name}.`,
-  )}`;

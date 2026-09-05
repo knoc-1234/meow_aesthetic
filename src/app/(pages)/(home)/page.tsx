@@ -15,7 +15,7 @@ export const revalidate = 60;
 export const metadata = createPageMetadata({
   title: "Meow Aesthetics | Nail Salon, Facial & Lash Treatment Singapore",
   description:
-    "Meow Aesthetics offers gel nails, lash extensions, facials and skin treatments in Marine Parade and Woods Square. Book via WhatsApp today. Open daily 11:30am-7pm.",
+    "Meow Aesthetics offers gel nails, lash extensions, facials and skin treatments in Marine Parade and Woods Square. Book through the Le Meow app. Open daily 11:30am-7pm.",
 });
 
 const getHeroData = async () => {
