@@ -1,22 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 import ReactDOM from "react-dom";
 import { useEffect, useRef } from "react";
 import { formatProductPrice } from "@/lib/product-utils";
+import ProductActionButtons from "@/components/products/ProductActionButtons";
 
 const ProductQuickViewPopup = ({
   setShowPopup,
-  onBuyNow,
   title,
   price,
   description,
   imageUrl,
+  slug,
 }: {
   setShowPopup: (value: boolean) => void;
-  onBuyNow: () => void;
   title: string;
   price: string;
   description: string;
   imageUrl: string;
+  slug?: string;
 }) => {
   const popupRef = useRef<HTMLDivElement>(null);
 
@@ -75,17 +77,21 @@ const ProductQuickViewPopup = ({
           </div>
           <div className="flex flex-col gap-5 justify-between overflow-auto max-h-96">
             <div className="flex flex-col gap-2">
-              <h3>{title}</h3>
-              <p>{formatProductPrice(price)}</p>
-              <p>{description}</p>
+              {slug ? (
+                <Link
+                  href={`/products/${slug}`}
+                  onClick={() => setShowPopup(false)}
+                  className="hover:underline"
+                >
+                  <h3 className="text-xl font-semibold text-neutral-900">{title}</h3>
+                </Link>
+              ) : (
+                <h3 className="text-xl font-semibold text-neutral-900">{title}</h3>
+              )}
+              <p className="font-semibold text-neutral-700">{formatProductPrice(price)}</p>
+              <p className="text-sm text-neutral-600 leading-relaxed">{description}</p>
             </div>
-            <button
-              type="button"
-              onClick={onBuyNow}
-              className="bg-[#76747B] text-white p-2 rounded-full my-2 text-center"
-            >
-              Buy Now
-            </button>
+            <ProductActionButtons size="md" />
           </div>
         </div>
       </div>

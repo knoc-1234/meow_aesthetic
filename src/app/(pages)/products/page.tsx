@@ -53,6 +53,7 @@ const Product = async () => {
                   description={product.description || ""}
                   price={product.price || ""}
                   imageUrl={getProductImage(product)}
+                  slug={product.slug || String(product.id)}
                   addtoCart={true}
                 />
               ))}

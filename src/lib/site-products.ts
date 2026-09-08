@@ -86,3 +86,19 @@ export const getSiteProducts = async () => {
     .filter((product) => product.is_active)
     .sort((a, b) => a.id - b.id);
 };
+
+export const getSiteProductBySlug = async (
+  slug: string,
+): Promise<SiteProduct | null> => {
+  const products = await getSiteProducts();
+  const decodedSlug = decodeURIComponent(slug).toLowerCase();
+
+  return (
+    products.find(
+      (product) =>
+        product.slug?.toLowerCase() === decodedSlug ||
+        String(product.id) === decodedSlug,
+    ) || null
+  );
+};
+

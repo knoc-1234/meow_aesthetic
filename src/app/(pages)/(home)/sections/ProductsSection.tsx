@@ -67,6 +67,7 @@ const ProductsSection = ({ data }: { data: SiteProduct[] }) => {
                 description={e.description || ""}
                 price={e.price || ""}
                 imageUrl={getProductImage(e)}
+                slug={e.slug || String(e.id)}
               />
             </SwiperSlide>
           ))
