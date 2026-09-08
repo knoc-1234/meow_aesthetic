@@ -6,6 +6,7 @@ export const appStoreUrl =
   "https://apps.apple.com/my/app/le-meow/id6763483119";
 export const googlePlayUrl =
   "https://play.google.com/store/apps/details?id=com.meow.lemeow";
+export const whatsappUrl = "https://wa.me/6587713358";
 
 export const serviceRouteById = {
   2: "/nails",

@@ -90,7 +90,7 @@ const ProductQuickViewPopup = ({
         </div>
       </div>
     </div>,
-    document.body
+    document.body,
   );
 };
 
